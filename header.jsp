@@ -11,12 +11,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1 class="navbar-brand"><a href="/index"></a></h1>
+                <h1 class="navbar-brand"><a href="index.jsp"></a></h1>
             </div>
             <!--navbar-header-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/index" <c:if test="${param.flag==1}">class="active"</c:if>>首页</a></li>
+                    <li><a href="index.jsp" <c:if test="${param.flag==1}">class="active"</c:if>>首页</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle <c:if test="${param.flag==2}">active</c:if>
                         " data-toggle="dropdown">商品分类<b class="caret"></b></a>
@@ -27,7 +27,7 @@
                                         <h4>商品分类</h4>
                                         <ul class="multi-column-dropdown">
                                             <c:forEach items="${typeList}" var="t">
-                                                <li><a class="list" href="/goods_list?typeid=${t.id}">${t.name}</a></li>
+                                                <li><a class="list" href="goods_list?typeid=${t.id}">${t.name}</a></li>
                                             </c:forEach>
                                         </ul>
                                     </div>
@@ -35,21 +35,21 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="/goodsrecommend_list?type=2" <c:if test="${param.flag==3 && t==2}">class="active"</c:if>>热销</a></li>
-                    <li><a href="/goodsrecommend_list?type=3" <c:if test="${param.flag==3 && t==3}">class="active"</c:if>>新品</a></li>
-
+                    <li><a href="HotProducts">热销</a></li>
+                    <li><a href="goodsrecommend_list?type=3" <c:if test="${param.flag==3 && t==3}">class="active"</c:if>>新品</a></li>
+                    <li><a href="Recommend">推荐</a></li>
+					<li><a href="BrowsingLog">浏览历史</a></li>
                     <c:choose><c:when test="${empty user }">
-                        <li><a href="/user_register.jsp" <c:if test="${param.flag==10 }">class="active"</c:if>>注册</a></li>
-                        <li><a href="/user_login.jsp" <c:if test="${param.flag==9 }">class="active"</c:if>>登录</a></li>
+                        <li><a href="user_register.jsp" <c:if test="${param.flag==10 }">class="active"</c:if>>注册</a></li>
+                        <li><a href="user_login.jsp" <c:if test="${param.flag==9 }">class="active"</c:if>>登录</a></li>
                     </c:when><c:otherwise>
-                        <li><a href="/order_list" <c:if test="${param.flag==5 }">class="active"</c:if>>我的订单</a></li>
-                        <li><a href="/user_center.jsp" <c:if test="${param.flag==4 }">class="active"</c:if>>个人中心</a></li>
-                        <li><a href="/user_logout" >退出</a></li>
+                        <li><a href="order_list" <c:if test="${param.flag==5 }">class="active"</c:if>>我的订单</a></li>
+                        <li><a href="user_center.jsp" <c:if test="${param.flag==4 }">class="active"</c:if>>个人中心</a></li>
+                        <li><a href="user_logout" >退出</a></li>
                     </c:otherwise>
                     </c:choose>
-
                     <c:if test="${!empty user && user.isadmin }">
-                        <li><a href="/admin/index.jsp" target="_blank">后台管理</a></li>
+                        <li><a href="admin/index.jsp" target="_blank">后台管理</a></li>
                     </c:if>
                 </ul>
                 <!--/.navbar-collapse-->
@@ -60,14 +60,13 @@
             <div class="header-right search-box">
                 <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                 <div class="search">
-                    <form class="navbar-form" action="/goods_search">
+                    <form class="navbar-form" action="goods_search">
                         <input type="text" class="form-control" name="keyword">
                         <button type="submit" class="btn btn-default <c:if test="${param.flag==7 }">active</c:if>"
                                 aria-label="Left Align">搜索</button>
                     </form>
                 </div>
             </div>
-
             <div class="header-right cart">
                 <a href="goods_cart.jsp">
                     <span class="glyphicon glyphicon-shopping-cart <c:if test="${param.flag==8 }">active</c:if>" aria-hidden="true"><span class="card_num"><c:choose><c:when test="${empty order}">0</c:when><c:otherwise>${order.amount}</c:otherwise></c:choose></span></span>

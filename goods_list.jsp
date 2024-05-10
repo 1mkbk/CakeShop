@@ -27,7 +27,7 @@
         <div class="col-md-12 product-model-sec">
             <c:forEach items="${p.list}" var="g">
                 <div class="product-grid">
-                    <a href="/goods_detail?id=${g.id}">
+                    <a href="goods_detail?id=${g.id}">
                         <div class="more-product"><span> </span></div>
                         <div class="product-img b-link-stripe b-animate-go  thickbox">
                             <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="240" height="240">

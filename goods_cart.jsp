@@ -30,12 +30,12 @@
 				<div class="cart-header col-md-6">
 					<div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
-							<a href="/goods_detail?id=${item.key}">
+							<a href="goods_detail?id=${item.key}">
 								<img src="${pageContext.request.contextPath }${item.value.goods.cover}" class="img-responsive">
 							</a>
 						</div>
 						<div class="cart-item-info">
-							<h4><a href="/goods_detail?id=${item.key}">${item.value.goods.name}</a></h4>
+							<h4><a href="goods_detail?id=${item.key}">${item.value.goods.name}</a></h4>
 							<h3><span>单价: ¥ ${item.value.price}</span></h3>
 							<h3><span>数量: ${item.value.amount}</span></h3>
 							<a class="btn btn-info" href="javascript:buy(${item.key});">增加</a>
@@ -49,7 +49,7 @@
 			<div class="cart-header col-md-12">
 				<hr>
 				<h4>订单总金额: ¥ ${order.total}</h4>
-				<a class="btn btn-success btn-lg" style="margin-left:74%" href="/order_submit">提交订单</a>
+				<a class="btn btn-success btn-lg" style="margin-left:74%" href="order_submit.jsp">提交订单</a>
 			</div>
 		</div>
 	</div>

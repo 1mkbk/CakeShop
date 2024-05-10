@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="layer/layer.js"></script>
-	<script type="text/javascript" src="js/cart.js"></script>
+	<script type="text/javascript" src="js/cart.js"></script> 
 	<script>
 		$(function() {
 		  $('.flexslider').flexslider({
@@ -34,7 +34,6 @@
 			<div class="single-grids">				
 				<div class="col-md-4 single-grid">		
 					<div class="flexslider">
-						
 						<ul class="slides">
 							<li data-thumb="${g.cover}">
 								<div class="thumb-image"> <img src="${g.cover}" data-imagezoom="true" class="img-responsive"> </div>
@@ -67,10 +66,9 @@
 				<div class="col-md-4 single-grid1">
 					<!-- <h2>商品分类</h2> -->
 					<ul>
-                        <li><a  href="/goods_list">全部系列</a></li>
-
+                        <li><a  href="goods_list.jsp">全部系列</a></li>
                         <c:forEach items="${typeList}" var="t">
-                            <li><a href="/goods_list?typeid=${t.id}">${t.name}</a></li>
+                            <li><a href="goods_list?typeid=${t.id}">${t.name}</a></li>
                         </c:forEach>
 					</ul>
 				</div>

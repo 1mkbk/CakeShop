@@ -15,71 +15,20 @@
 </head>
 <body>
 <!--header-->
-<jsp:include page="/header.jsp">
+<jsp:include page="header.jsp">
     <jsp:param name="flag" value="1"></jsp:param>
 </jsp:include>
-<!--banner-->
-<!--gallery-->
-<div class="gallery">
-    <div class="container">
-        <div class="alert alert-danger">热销推荐</div>
-        <div class="gallery-grids">
-            <c:forEach items="${hotList}" var="g">
-                <div class="col-md-4 gallery-grid glry-two">
-                    <a href="/goods_detail?id=${g.id}">
-                        <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="350" height="350"/>
-                    </a>
-                    <div class="gallery-info galrr-info-two">
-                        <p>
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看详情</a>
-                        </p>
-                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻购买</a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="galy-info">
-                        <p>${g.typeName} > ${g.name}</p>
-                        <div class="galry">
-                            <div class="prices">
-                                <h5 class="item_price">¥ ${g.price}</h5>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
+<br><br><br><br>
+<div class="alert alert-success">
+	<p style="font-size: 28px;" align="center">欢迎来到我们的网上蛋糕商城，这里是您甜蜜梦想的起点！</p><br>
+	<p style="font-size: 20px;" align="center">在这个独特的甜蜜角落，我们为您精心挑选了各式各样的美味蛋糕，每一款都是烘焙艺术的杰作，为您的味蕾奉上一场无与伦比的盛宴。</p><br>
+    <p style="font-size: 20px;" align="center">无论是庆生、纪念日，还是与亲朋好友的欢聚时刻，我们都有完美的蛋糕选择，让您的每个特殊时刻都成为难忘的美好回忆。</p><br>
+    <p style="font-size: 20px;" align="center">我们致力于为您提供高品质、新鲜出炉的蛋糕，通过精湛的烘焙技艺和丰富的口味组合，为您打造独一无二的味觉享受。</p><br>
+	<p style="font-size: 20px;" align="center">而且，为了让您的购物体验更加愉悦，我们提供便捷的在线订购服务，确保您能随时随地轻松选购心仪蛋糕，将甜蜜送到您手中。</p><br>
+	<p style="font-size: 20px;" align="center">不仅如此，我们的团队时刻倾听您的需求，提供个性化定制服务，确保每一块蛋糕都能符合您的期望，为您的庆典增色不少。</p><br>
+	<p style="font-size: 20px;" align="center">感谢您选择我们，让我们一同走进这个充满甜蜜诱惑的蛋糕世界。</p><br>
+	<p style="font-size: 20px;" align="center">期待为您带来甜蜜的每一刻，让美好时光从这里开始。</p><br>
+	<p style="font-size: 28px;" align="center">祝您在我们的蛋糕商城中购物愉快！</p></div>
 
-        </div>
-        <div class="clearfix"></div>
-        <div class="alert alert-info">新品推荐</div>
-        <div class="gallery-grids">
-            <c:forEach items="${newList}" var="g">
-                <div class="col-md-3 gallery-grid ">
-                    <a href="/goods_detail?id=${g.id}">
-                        <img src="${g.cover}" class="img-responsive" alt="${g.name}"/>
-                    </a>
-                    <div class="gallery-info">
-                        <p>
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看详情</a>
-                        </p>
-                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻购买</a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="galy-info">
-                        <p>${g.typeName} > ${g.name}</p>
-                        <div class="galry">
-                            <div class="prices">
-                                <h5 class="item_price">¥ ${g.price}</h5>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-
-        </div>
-    </div>
-</div>
 </body>
 </html>

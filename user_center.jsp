@@ -33,20 +33,20 @@
 				
 					<div class="register-top-grid">
 						<h3>个人中心</h3>
-						<form action="/user_changeaddress" method="post">
+						<form action="user_changeaddress" method="post">
 						<!-- 收货信息 start -->
 						<h4>收货信息</h4>
 						<div class="input">
 							<span>收货人<label></label></span>
-							<input type="text" name="name" value="${user.name }" placeholder="请输入收货"> 
+							<input type="text" name="name" value="${user.name }"> 
 						</div>
 						<div class="input">
 							<span>收货电话</span>
-							<input type="text" name="phone" value="${user.phone }" placeholder="请输入收货电话"> 
+							<input type="text" name="phone" value="${user.phone }"> 
 						</div>
 						<div class="input">
 							<span>收货地址</span>
-							<input type="text" name="address" value="${user.address }" placeholder="请输入收货地址"> 
+							<input type="text" name="address" value="${user.address }"> 
 						</div>
 						<div class="register-but text-center">
 						   <input type="submit" value="提交">
@@ -54,15 +54,15 @@
 						<!-- 收货信息 end -->
 						</form>
 						<hr>
-						<form action="/user_changepwd" method="post">
+						<form action="user_changepwd" method="post">
 						<h4>安全信息</h4>
 						<div class="input">
 							<span>原密码</span>
-							<input type="text" name="password" placeholder="请输入原密码"> 
+							<input type="text" name="password"> 
 						</div>
 						<div class="input">
 							<span>新密码</span>
-							<input type="text" name="newPassword" placeholder="请输入新密码"> 
+							<input type="text" name="newPassword"> 
 						</div>
 						<div class="clearfix"> </div>
 						<div class="register-but text-center">

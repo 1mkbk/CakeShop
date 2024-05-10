@@ -22,7 +22,7 @@
 		<div class="container">
 			<h3>确认收货信息</h3>
 			<br><br>
-			<form class="form-horizontal" action="/order_confirm" method="post" id="payform">
+			<form class="form-horizontal" action="order_confirm" method="post" id="payform">
 				<div class="row">
 					<label class="control-label col-md-1">收货人</label>
 					<div class="col-md-6">

@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<jsp:include page="/header.jsp">
+<jsp:include page="header.jsp">
 	<jsp:param value="8" name="flag"/>
 </jsp:include>
 
@@ -26,15 +26,13 @@
 <div class="products">
 	<div class="container">
 		<h3>  ‘${param.keyword }’搜索结果 </h3>
-
 		<div class="col-md-12 product-model-sec">
-
 			<c:forEach items="${p.list }" var="g">
 				<div class="product-grid">
 					<a href="${pageContext.request.contextPath }/goods_detail?id=${g.id}">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${pageContext.request.contextPath }${g.cover}" class="img-responsive" alt="${g.name }" width="240" height="240">
+							<img src="${g.cover}" class="img-responsive" alt="${g.name }" width="240" height="240">
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看详情</button>

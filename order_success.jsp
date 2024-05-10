@@ -21,7 +21,7 @@
 			<c:if test="${!empty msg }">
 				<div class="alert alert-success">${msg }</div>
 			</c:if>
-			<p><a class="btn btn-success" href="/order_list">查看我的订单</a></p>
+			<p><a class="btn btn-success" href="order_list">查看我的订单</a></p>
 		</div>
 	</div>
 </body>
